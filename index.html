@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Сколько дней ты</title>
+</head>
+<body>
+
+<script>
+	let today = new Date();
+	let days = 0;
+
+	document.write("Сейчас: " + today.getDate() + "-" + (today.getMonth() + 1) + "-" + today.getFullYear() + "<br>");
+
+	let birthday = new Date(1983, 06, 08);
+
+	document.write("Я родился: " + birthday.getDate() + "-" + (birthday.getMonth() + 1) + "-" + birthday.getFullYear() +  "<br>" + "<br>" + "<br>");
+
+	while(birthday < today)
+	{
+		birthday.setDate(birthday.getDate() + 1);
+		days++;
+	}
+document.write("Я прожил " + days + " дня");
+</script>
+	
+</body>
+</html>
